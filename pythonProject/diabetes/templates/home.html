@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        /* Styling the body with a fixed background */
+        body {
+            background-image: url("{% static 'diabetes/images/img2.jpeg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Center alignment for the container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Welcome text styling */
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Add depth with shadow */
+            margin: 0 0 20px 0;
+        }
+
+        /* Subtext styling */
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 10px 0 30px 0;
+            color: #dddddd;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background: linear-gradient(to right, #4dc3ff, #007acc);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for the button */
+        input[type="submit"]:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            input[type="submit"] {
+                font-size: 16px;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <h1>Welcome to the Diabetes Prediction System</h1>
+        <h2>Take control of your health today by predicting your diabetes risk.</h2>
+
+        <!-- Start button -->
+        <form action="predict">
+            <input type="submit" value="Let's Get Started">
+        </form>
+    </div>
+</body>
+</html>
